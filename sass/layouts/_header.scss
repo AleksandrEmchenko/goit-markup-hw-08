@@ -1,0 +1,148 @@
+header{
+    border-bottom: 1px solid #ECECEC;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .list{
+    display: flex;
+    
+}
+
+.site-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
+.site-nav .link,
+.auth-nav .link{
+    display: block;
+    padding: 32px 0;
+}
+
+.site-nav .item,
+.auth-nav .item{
+    position: relative;
+}
+
+.site-nav .link::after,
+.auth-nav .link::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $text-color;
+    transition: width;
+    // @extend %transition;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover::after,
+.auth-nav .link:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.link.current::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+}
+
+.auth-nav{
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-nav .item,
+.auth-nav .link{
+    display: flex;
+    align-items: center;
+}
+
+.auth-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
+.auth-nav .link{
+    color: $text-color;
+    fill: $text-color;
+    transition-property: color, fill;
+    @extend %transition;
+}
+
+.icon-mail{
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+
+    .auth-nav .link:hover &,
+    .auth-nav .link:focus &{
+    fill: $accent-color;
+    color: $accent-color;}
+}
+
+.icon-tel{
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+
+    .auth-nav .link:hover &,
+    .auth-nav .link:focus &{
+    fill: $accent-color;
+    color: $accent-color;}
+}
+
+.logo{
+    margin-right: 93px;
+    color: $accent-color;
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+}
+
+.logoheader{
+    color: $secondary-text-color;
+}
+
+.logofooter{
+    color: $secondary-title-color;
+}
+
+.site-nav .link{
+    color: $title-color;
+}
+.link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition-property: color;
+    @extend %transition;
+
+    &:hover,
+    &:focus,
+    &.current{
+        color: $accent-color;}
+}
+
+.list{
+    list-style: none;
+}
