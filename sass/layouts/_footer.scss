@@ -3,35 +3,60 @@
     background-color: $first-bgcolor;
 
     & .container{
-    display: flex;
-    align-items: baseline;}
+        text-align: center;
+
+        @media screen and (min-width: 1200px){
+          display: flex;
+          align-items: baseline; 
+          text-align: left; 
+        }
+    }
 
     & .logo{
-    display: block;
-    margin-bottom: 20px;}
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    & address{
+        margin-bottom: 60px;
+    }
 
     & .link{
-    font-weight: 400;}
+        font-weight: 400;
+    }
 
     & .social{
-    width: 206px;
-    margin-bottom: 0;
-    padding: 0;}
+        width: 206px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        padding: 0;
+    }
 
     & .social-list__link{
-    fill: $secondary-title-color;}
+        fill: $secondary-title-color;
+    }
 
     & .social-list__item{
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.1);}
+        background-color: rgba(255, 255, 255, 0.1);
+    }
    
     & .social-link:hover,
     & .social-link:focus{
-    background-color: $accent-color;}
+     background-color: $accent-color;
+    }
 }
 
 .footer-contact{
-    margin-right: 70px;
+    @media screen and (min-width: 768px){
+        display: inline-block;
+        margin-right: 175px;
+    } 
+
+    @media screen and (min-width: 1200px){
+        margin-right: 90px;
+    } 
 }
 
 .address{
@@ -50,7 +75,14 @@
 }
 
 .join{
-    margin-right: 90px;
+    @media screen and (min-width: 768px){
+       display: inline-block;
+        vertical-align: top; 
+    }
+
+     @media screen and (min-width: 1200px){
+       margin-right: 90px;
+    }
 }
 
 .join-title{

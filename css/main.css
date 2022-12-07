@@ -14,7 +14,7 @@ h6,
 p,
 ul {
   margin-top: 0;
-  Padding: 0;
+  padding: 0;
 }
 
 p,
@@ -34,7 +34,6 @@ body {
 
 .section {
   padding: 94px 0;
-  outline: 2px solid green;
 }
 @media screen and (max-width: 480px) {
   .section {
@@ -45,7 +44,6 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  outline: 2px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -837,23 +835,34 @@ header {
   background-color: #2F303A;
 }
 .footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    text-align: left;
+  }
 }
 .footer .logo {
   display: block;
+  margin-right: 0;
   margin-bottom: 20px;
+}
+.footer address {
+  margin-bottom: 60px;
 }
 .footer .link {
   font-weight: 400;
 }
 .footer .social {
   width: 206px;
-  margin-bottom: 0;
+  margin: 0 auto;
+  margin-bottom: 60px;
   padding: 0;
 }
 .footer .social-list__link {
@@ -867,8 +876,16 @@ header {
   background-color: #2196F3;
 }
 
-.footer-contact {
-  margin-right: 70px;
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    display: inline-block;
+    margin-right: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contact {
+    margin-right: 90px;
+  }
 }
 
 .address {
@@ -886,8 +903,16 @@ header {
   margin-bottom: 9px;
 }
 
-.join {
-  margin-right: 90px;
+@media screen and (min-width: 768px) {
+  .join {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-right: 90px;
+  }
 }
 
 .join-title {
@@ -901,8 +926,10 @@ header {
 }
 
 .email-subs {
-  width: 358px;
-  margin-right: 12px;
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -914,6 +941,13 @@ header {
   font-size: 16px;
   line-height: 1.25;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .email-subs {
+    display: inline-block;
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .form-subs .button {

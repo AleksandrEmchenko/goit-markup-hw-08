@@ -22,9 +22,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 210px;
-    // width: 170px;
-    // min-width: calc((100% - 30px) / 2);
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -32,11 +29,6 @@
     transition-property: border, fill;
     @extend %transition;
 
-        
-
-        
-    
-    
     &:hover, &:focus{
         border: 1px solid $accent-color;
         fill: $accent-color;

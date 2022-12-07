@@ -7,7 +7,7 @@ h6,
 p,
 ul {
 	margin-top: 0;
-    Padding: 0;
+    padding: 0;
 }
 
 p, 
@@ -17,7 +17,6 @@ ul{
 
 body{
     color: $text-color;
-
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -28,18 +27,16 @@ body{
 
 .section{
     padding: 94px 0;
-    outline: 2px solid green;
-
+    
     @media screen and (max-width: 480px){
-        padding: 60px 0;;
+        padding: 60px 0;
     }
 }
 
 .container{
     margin: 0 auto;
     padding: 0 15px;
-    outline: 2px solid red;
-        
+            
     @media screen and (min-width: 480px) {
         width: 480px;
     }

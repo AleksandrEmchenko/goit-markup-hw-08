@@ -1,6 +1,8 @@
 .email-subs{
-    width: 358px;
-    margin-right: 12px;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -8,9 +10,17 @@
     background-color: transparent;
     
     &[placeholder="E-mail"]{
-    font-size: 16px;
-    line-height: 1.25;
-    color: $secondary-title-color;}
+        font-size: 16px;
+        line-height: 1.25;
+        color: $secondary-title-color;
+    }
+
+    @media screen and (min-width: 1200px){
+        display: inline-block;
+        width: 358px;
+        margin-right: 12px;
+    }
+
 }
 
 .form-subs .button{
