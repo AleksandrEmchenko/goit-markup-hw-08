@@ -11,7 +11,7 @@ header{
     display: flex;
     
 }
-
+        
 .site-nav .item:not(:last-child){
     margin-right: 50px;
 }
@@ -145,4 +145,31 @@ header{
 
 .list{
     list-style: none;
+}
+
+
+// -----------------
+.site-nav,
+.auth-nav{
+    display: none;
+}
+// -----------------
+.menu-button{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.menu-button .icon-cross{
+    display: none;
+}
+
+.menu-button.is-open .icon-cross{
+    display: block;
+}
+
+.menu-button.is-open .icon-menu{
+    display: none;
 }

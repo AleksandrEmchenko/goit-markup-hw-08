@@ -6,23 +6,23 @@
     height: 100vh;
     background-color: rgba(255, 255, 255, .5);
     opacity: 1;
-
+    
     &.is-hidden{
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition-delay: 250ms;}
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 250ms;
+    }
 }
 
 .modal{
-    display: flex;
+    // display: flex;
     position: absolute;
-    width: 528px;
+    width: 450px;
     min-height: 581px;
     top: 50%;
     left: 50%;
     padding: 40px;
-    
     color: #757575;
     background-color: #ffffff;
     border: 2px solid rgb(128, 128, 128);
@@ -36,10 +36,19 @@
     @extend %transition;
     overflow: hidden;
 
+    @media screen and (min-width: 1200px){
+        width: 528px;
+    }
+
     .backdrop.is-hidden &{
-    transform: translate(-50%, -50%) scale(0);
-    color: #ffffff;}
+        transform: translate(-50%, -50%) scale(0);
+        color: #ffffff;
+    }
+
+    
 }
+
+
 
 .close{
     position: absolute;
@@ -60,6 +69,7 @@
     @extend %transition;
 
     &:hover{
-    transform: rotate(360deg);
-    fill: $accent-color;}
+        transform: rotate(360deg);
+        fill: $accent-color;
+    }
 }

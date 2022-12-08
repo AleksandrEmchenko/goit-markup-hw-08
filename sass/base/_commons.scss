@@ -25,6 +25,10 @@ body{
     letter-spacing: 0.02em;
 }
 
+body.modal-open{
+    overflow: hidden;
+} 
+
 .section{
     padding: 94px 0;
     

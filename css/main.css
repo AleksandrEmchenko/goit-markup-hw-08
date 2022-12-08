@@ -32,6 +32,10 @@ body {
   letter-spacing: 0.02em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .section {
   padding: 94px 0;
 }
@@ -266,6 +270,33 @@ header {
   list-style: none;
 }
 
+.site-nav,
+.auth-nav {
+  display: none;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +308,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1600px;
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg.jpg");
@@ -286,21 +317,33 @@ header {
   background-size: cover;
   background-color: #2F303A;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
 .hero__title {
   display: block;
-  max-width: 696px;
-  margin-bottom: 30px;
+  width: 360px;
+  margin: 0 auto 30px auto;
   color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
+}
 .hero__button {
   display: block;
-  padding: 10px 32px;
+  padding: 10px 24px;
   margin: 0 auto;
   border: 2px solid #2196F3;
   border-radius: 4px;
@@ -312,6 +355,11 @@ header {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+  }
 }
 
 .backdrop {
@@ -332,11 +380,8 @@ header {
 }
 
 .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: absolute;
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   top: 50%;
   left: 50%;
@@ -359,6 +404,11 @@ header {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0);
@@ -416,7 +466,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 448px;
+  width: 370px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -430,6 +480,11 @@ header {
 .form-field .link:hover, .form-field .link:focus {
   font-weight: 700;
 }
+@media screen and (min-width: 1200px) {
+  .form-field {
+    width: 448px;
+  }
+}
 
 .area {
   margin-bottom: 20px;
@@ -437,6 +492,12 @@ header {
 
 .licence {
   margin-bottom: 30px;
+  font-size: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .licence {
+    font-size: 14px;
+  }
 }
 
 .form-label {
@@ -535,14 +596,18 @@ header {
 
 .licence .link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196F3;
   -webkit-transition-property: font-weight;
   transition-property: font-weight;
+}
+@media screen and (min-width: 1200px) {
+  .licence .link {
+    line-height: 1.71;
+  }
 }
 
 .form-button {
