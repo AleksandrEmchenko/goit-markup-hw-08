@@ -2,26 +2,110 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1600px;
+    max-width: 480px;
+    height: auto;
     padding: 118px 0;
     margin: 0 auto;
-    background-image: linear-gradient(to right,
-     rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0.4)),
-     url("../images/hero-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: $first-bgcolor;
+    
+        @media (min-device-pixel-ratio: 1),
+            (min-resolution: 96dpi),
+            (min-resolution: 1dppx) {
+                background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                    url("../../images/header-mobile.jpg");
+            }
+    
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                    url("../../images/header-mobile@2x.jpg");
+            }
+
+        @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                    url("../../images/header-mobile@3x.jpg");
+            }
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: $first-bgcolor;
+
+        @media screen and (min-width: 768px){
+            max-width: 768px;
+        
+            @media (min-device-pixel-ratio: 1),
+                (min-resolution: 96dpi),
+                (min-resolution: 1dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-tablet.jpg");
+                }
+        
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-tablet@2x.jpg");
+                }
+
+            @media (min-device-pixel-ratio: 3),
+                (min-resolution: 288dpi),
+                (min-resolution: 3dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-tablet@3x.jpg");
+                }    
+        }
 
         @media screen and (min-width: 1200px){
+            max-width: 1600px;
             padding: 200px 0;
+        
+            @media (min-device-pixel-ratio: 1),
+                (min-resolution: 96dpi),
+                (min-resolution: 1dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-desktop.jpg");
+                }
+        
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-desktop@2x.jpg");
+                }
+
+            @media (min-device-pixel-ratio: 3),
+                (min-resolution: 288dpi),
+                (min-resolution: 3dppx) {
+                    background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url("../../images/header-desktop@3x.jpg");
+                }    
         }
 
 
     &__title{
         display: block;
-        width: 360px;
+        max-width: 360px;
         margin: 0 auto 30px auto;
         color: $secondary-title-color;
         font-weight: 900;
@@ -32,7 +116,7 @@
         text-transform: uppercase;
         
         @media screen and (min-width: 1200px){
-            width: 696px;
+            max-width: 696px;
             font-size: 44px;
             line-height: 1.4;
         }

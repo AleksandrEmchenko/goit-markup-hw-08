@@ -1,6 +1,6 @@
 .email-subs{
     display: block;
-    width: 450px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
     padding: 15px 16px;
@@ -14,6 +14,11 @@
         line-height: 1.25;
         color: $secondary-title-color;
     }
+
+    @media screen and (min-width: 480px){
+            width: 450px;
+            
+        }
 
     @media screen and (min-width: 1200px){
         display: inline-block;
