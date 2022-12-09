@@ -838,6 +838,7 @@ header {
   }
 }
 .team__card-img {
+  width: 100%;
   margin-bottom: 30px;
 }
 .team__card-title {

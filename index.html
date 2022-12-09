@@ -122,19 +122,37 @@
                 <ul class="occupation__list list">   
                     <li class="occupation__item">
                         <div class="occupation__project-thumb">
-                            <img src="./images/box_1.jpg" alt="Декстопні додатки" width="370" class="occupation__img">
+                            <picture>
+                                <source srcset="
+                                    ./images/box1.jpg 1x, 
+                                    ./images/box1@2x.jpg 2x, 
+                                    ./images/box1@3x.jpg 3x" media="(min-width: 1200px)" />
+                                <img src="./images/box1.jpg" alt="Декстопні додатки" width="370" class="occupation__img" />
+                            </picture>
                             <div class="occupation__overlay overlay">Декстопні додатки</div>
                         </div>
                     </li>
                     <li class="occupation__item">
                         <div class="occupation__project-thumb">
-                            <img src="./images/box_2.jpg" alt="Мобільні додатки" width="370" class="occupation__img">
+                            <picture>
+                                <source srcset="
+                                    ./images/box2.jpg 1x, 
+                                    ./images/box2@2x.jpg 2x, 
+                                    ./images/box2@3x.jpg 3x" media="(min-width: 1200px)" />
+                                <img src="./images/box2.jpg" alt="Мобільні додатки додатки" width="370" class="occupation__img" />
+                            </picture>
                             <div class="occupation__overlay overlay">Мобільні додатки</div>
                         </div>
                     </li>
                     <li class="occupation__item">
                         <div class="occupation__project-thumb">
-                            <img src="./images/box_3.jpg" alt="Дизайнерські рішення" width="370" class="occupation__img">
+                            <picture>
+                                <source srcset="
+                                    ./images/box3.jpg 1x, 
+                                    ./images/box3@2x.jpg 2x, 
+                                    ./images/box3@3x.jpg 3x" media="(min-width: 1200px)" />
+                                <img src="./images/box3.jpg" alt="Дизайнерські рішення" width="370" class="occupation__img" />
+                            </picture>
                             <div class="occupation__overlay overlay">Дизайнерські рішення</div>
                         </div>
                     </li>
@@ -147,16 +165,28 @@
                 <h2 class="team__title title">Наша команда</h2>
                 <ul class="team__list list">
                     <li class="team__card">
-
-                        <img
-                        srcset="./images/team-1.jpg 1x,
-                         ./images/team-1@2x.jpg 2x,
-                         ./images/team-1@3x.jpg 3x"
-                         src="./images/team-1.jpg"
-                         alt="Учасник команди"
-                         width="270"
-                         class="team__card-img">
-                        
+                        <picture>
+                            <source srcset="
+                                ./images/team1desk.jpg 1x, 
+                                ./images/team1desk@2x.jpg 2x, 
+                                ./images/team1desk@3x.jpg 3x"
+                                media="(min-width: 1200px)"/>
+                            <source srcset="
+                                ./images/team1tabl.jpg 1x, 
+                                ./images/team1tabl@2x.jpg 2x, 
+                                ./images/team1tabl@3x.jpg 3x"
+                                media="(min-width: 768px)"/>
+                            <source srcset="
+                                ./images/team1mob.jpg 1x, 
+                                ./images/team1mob@2x.jpg 2x, 
+                                ./images/team1mob@3x.jpg 3x"
+                                media="(max-width: 767px)"/>
+                            <img
+                                src="./images/team1mob.jpg"
+                                alt="Учасник команди"
+                                width="270"
+                                class="team__card-img"/>    
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__card-title">Ігор Дем'яненко</h3>
                             <p class="team__card-subtitle">Product Designer</p>
@@ -193,7 +223,21 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img src="./images/img2.jpg" alt="Учасник команди" width="270" class="team__card-img">
+                        <picture>
+                            <source srcset="
+                                ./images/team2desk.jpg 1x, 
+                                ./images/team2desk@2x.jpg 2x, 
+                                ./images/team2desk@3x.jpg 3x" media="(min-width: 1200px)"/>
+                            <source srcset="
+                                ./images/team2tabl.jpg 1x, 
+                                ./images/team2tabl@2x.jpg 2x, 
+                                ./images/team2tabl@3x.jpg 3x" media="(min-width: 768px)"/>
+                            <source srcset="
+                                ./images/team2mob.jpg 1x, 
+                                ./images/team2mob@2x.jpg 2x, 
+                                ./images/team2mob@3x.jpg 3x" media="(max-width: 767px)"/>
+                            <img src="./images/team2mob.jpg" alt="Учасник команди" width="270" class="team__card-img"/>
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__card-title">Ольга Рєпіна</h3>
                             <p class="team__card-subtitle">Frontend Developer</p> 
@@ -230,7 +274,21 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img src="./images/img3.jpg" alt="Учасник команди" width="270" class="team__card-img">
+                        <picture>
+                            <source srcset="
+                                ./images/team3desk.jpg 1x, 
+                                ./images/team3desk@2x.jpg 2x, 
+                                ./images/team3desk@3x.jpg 3x" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/team3tabl.jpg 1x, 
+                                ./images/team3tabl@2x.jpg 2x, 
+                                ./images/team3tabl@3x.jpg 3x" media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/team3mob.jpg 1x, 
+                                ./images/team3mob@2x.jpg 2x, 
+                                ./images/team3mob@3x.jpg 3x" media="(max-width: 767px)" />
+                            <img src="./images/team3mob.jpg" alt="Учасник команди" width="270" class="team__card-img" />
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__card-title">Микола Тарасов</h3>
                             <p class="team__card-subtitle">Marketing</p>     
@@ -267,7 +325,21 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img src="./images/img4.jpg" alt="Учасник команди" width="270" class="team__card-img">
+                        <picture>
+                            <source srcset="
+                                ./images/team4desk.jpg 1x, 
+                                ./images/team4desk@2x.jpg 2x, 
+                                ./images/team4desk@3x.jpg 3x" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/team4tabl.jpg 1x, 
+                                ./images/team4tabl@2x.jpg 2x, 
+                                ./images/team4tabl@3x.jpg 3x" media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/team4mob.jpg 1x, 
+                                ./images/team4mob@2x.jpg 2x, 
+                                ./images/team4mob@3x.jpg 3x" media="(max-width: 767px)" />
+                            <img src="./images/team4mob.jpg" alt="Учасник команди" width="270" class="team__card-img" />
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__card-title">Михайло Єрмаков</h3>
                             <p class="team__card-subtitle">UI Designer</p>
