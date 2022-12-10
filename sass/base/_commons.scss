@@ -29,6 +29,10 @@ body.modal-open{
     overflow: hidden;
 } 
 
+.list{
+    list-style: none;
+}
+
 .section{
     padding: 94px 0;
     
@@ -100,4 +104,12 @@ body.modal-open{
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.no-scroll{
+    overflow: hidden;
 }
