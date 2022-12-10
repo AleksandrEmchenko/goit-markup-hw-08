@@ -1,4 +1,5 @@
-.form-subs .button, .clients-list .link, .social-list__link, .form-button, .licence .link, .form-textarea, .form-input, .form-icon, .close, .modal, .overlay, .button {
+.form-subs .button, .clients-list .link, .social-list__link, .form-button, .licence .link, .form-textarea, .form-input, .form-icon, .close, .modal, .menu .link::after,
+.contacts .link::after, .overlay, .button {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,6 +34,11 @@ body {
 }
 
 body.modal-open {
+  overflow: hidden;
+}
+
+body.no-scroll,
+body.mobile-open {
   overflow: hidden;
 }
 
@@ -122,18 +128,32 @@ body.modal-open {
   text-decoration: none;
 }
 
-.no-scroll {
-  overflow: hidden;
+.link:hover,
+.link.current {
+  color: #2196F3;
+}
+
+header {
+  border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
-  margin-right: 93px;
   color: #2196F3;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 87px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 93px;
+  }
 }
 
 .logoheader {
@@ -156,8 +176,26 @@ body.modal-open {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 60px;
-  outline: 2px solid red;
-  border-bottom: 1px solid #ECECEC;
+}
+
+@media screen and (max-width: 767px) {
+  .main-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .mobile-menu {
@@ -177,14 +215,16 @@ body.modal-open {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 48px 40px;
-  top: 60px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   height: 100vh;
   background-color: #fff;
   overflow: auto;
-  outline: 2px solid green;
+  z-index: 1;
+}
+.mobile-menu.is-hidden {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .mobile-menu {
@@ -212,8 +252,13 @@ body.modal-open {
   top: 10px;
   right: 15px;
 }
-.menu-button__close:hover, .menu-button__close:focus {
+.menu-button:hover, .menu-button:focus {
   fill: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .menu-button__open {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -226,15 +271,25 @@ body.modal-open {
           flex-direction: column;
   gap: 32px;
 }
+@media screen and (min-width: 768px) {
+  .menu__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 50px;
+  }
+}
 
 .menu__link {
+  position: relative;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
 }
-.menu__link.current {
+.menu__link.current, .menu__link:hover, .menu__link:focus {
   color: #2196F3;
 }
 
@@ -249,8 +304,24 @@ body.modal-open {
   gap: 64px;
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 32px;
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+  }
 }
 
 .tel {
@@ -287,6 +358,102 @@ body.modal-open {
   line-height: 1.22px;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .tel:hover, .mail:hover, .tel:focus, .mail:focus {
+    color: #2196F3;
+  }
+  .tel:hover + .contacts__icon--tel,
+.mail:hover + .contacts__icon--mail {
+    fill: #2196F3;
+  }
+  .contacts__icon--tel:hover,
+.contacts__icon--mail:hover {
+    fill: #2196F3;
+    cursor: pointer;
+  }
+  .menu__link {
+    font-size: 14px;
+    padding: 32px 0;
+  }
+  .mail, .tel {
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+  .contacts__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .contacts__icon {
+    margin-right: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 30px;
+    font-size: 14px;
+  }
+  .mail, .tel {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
+.menu .link::after,
+.contacts .link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #757575;
+  -webkit-transition: width;
+  transition: width;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu .link:hover::after,
+.contacts .link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link.current::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
 }
 
 .hero {

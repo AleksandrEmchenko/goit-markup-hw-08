@@ -13,7 +13,7 @@
   refs.closeMobileBtn.addEventListener('click', removeMenu);
 
   function toggleMobile() {
-    // document.body.classList.toggle('mobile-open');
+    document.body.classList.toggle('mobile-open');
     refs.mobile.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
     

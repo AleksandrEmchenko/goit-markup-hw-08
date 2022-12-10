@@ -29,6 +29,11 @@ body.modal-open{
     overflow: hidden;
 } 
 
+body.no-scroll,
+body.mobile-open{
+    overflow: hidden;
+}
+
 .list{
     list-style: none;
 }
@@ -110,6 +115,7 @@ body.modal-open{
     text-decoration: none;
 }
 
-.no-scroll{
-    overflow: hidden;
+.link:hover,
+.link.current{
+    color: $accent-color;
 }
