@@ -1,27 +1,23 @@
 (() => {
   const refs = {
-    openMobilelBtn: document.querySelector('[data-mobile-open]'),
-    closeMobileBtn: document.querySelector('[data-mobile-close]'),
-    menu: document.querySelector('[data-mobile]'),
+    openMenuBtn: document.querySelector('[data-menu-open]'),
+    closeMenuBtn: document.querySelector('[data-menu-close]'),
+    menu: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
-    mobileList: document.querySelector('.menuList')
+    menuList: document.querySelector('.menu-list'),
   };
-  
 
-  refs.openMobileBtn.addEventListener('click', toggleMobile);
-  refs.closeMobileBtn.addEventListener('click', toggleMobile);
-  refs.closeMobileBtn.addEventListener('click', removeMenu);
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.menuList.addEventListener('click', removeMenu);
 
-  function toggleMobile() {
-    document.body.classList.toggle('mobile-open');
-    refs.mobile.classList.toggle('is-hidden');
+  function toggleMenu() {
+    refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
-    
   }
 
   function removeMenu() {
-    refs.mobile.classList.add('is-hidden');
+    refs.menu.classList.add('is-hidden');
     refs.body.classList.remove('no-scroll');
-    
   }
 })();

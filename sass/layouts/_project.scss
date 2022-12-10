@@ -1,53 +1,74 @@
 .project{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
     text-decoration: none;
 
     &-img{
-    display: block;}
+        display: block;
+        width: 100%;
+    }
 
     &-text{
-    bottom: 0;
-    padding: 20px 24px;
-    border: 1px solid #EEEEEE;
-    opacity: 1;}
+        bottom: 0;
+        padding: 20px 24px;
+        border: 1px solid #EEEEEE;
+        opacity: 1;
+        width: 100%;
+    }
 
     &-title{
-    margin-bottom: 4px;
-
-    color: $title-color;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;}
+        margin-bottom: 4px;
+        color: $title-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
 
     &-sub-title{
-    color: $text-color;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-    
-    text-transform: none;}
+        color: $text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        text-transform: none;
+    }
 
     &-thumb{
-    position: relative;
-    overflow: hidden;}
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 450px;
+    }
 
     &-overlay{
-    top: 0;
-    height: 100%;
+        top: 0;
+        height: 100%;
+        padding: 63px 24px;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        background-color: rgba(33, 150, 243, 0.9);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .project{
+       flex-direction: row;
+       flex-wrap: wrap; 
+       align-items: stretch;
+    }
+
+    .project .item{
+        width: calc((100% - 30px) / 2);
+
+        @media screen and (min-width: 1200px){
+            width: calc((100% - 2 * 30px) / 3);
+        }
+    }
     
-    padding: 63px 24px;
-
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-
-    background-color: rgba(33, 150, 243, 0.9);}
 }
 
 .list.project .item:hover,

@@ -1,8 +1,18 @@
 .filters{
     display: flex;
+    
     justify-content: center;
     margin-bottom: 50px;
 
     & .item:not(:last-child){
     margin-right: 8px;}
+
+    @media screen and (max-width: 767px){
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    @media screen and (mix-width: 768px){
+        justify-content: center;
+    }
 }
