@@ -1,6 +1,7 @@
 header{
     border-bottom: 1px solid #ECECEC;
 }
+
 .logo{
     color: $accent-color;
     font-family: Raleway;
@@ -16,7 +17,6 @@ header{
     @media screen and (min-width: 768px){
         margin-right: 93px;
     }
-
 }
 
 .logoheader{
@@ -28,15 +28,11 @@ header{
 }
 
 .navigation{
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    
-    
-
-    
 }
 
 .main-menu{
@@ -51,7 +47,6 @@ header{
         align-items: center;
     }
 }
-
 // ----------Мобильное меню
 .mobile-menu {
     display: flex;
@@ -69,7 +64,6 @@ header{
     background-color: #fff;
     overflow: auto;
     z-index: 1;
-    
 
     &.is-hidden{
         display: none;
@@ -82,8 +76,8 @@ header{
     @media screen and (min-width: 768px){
         display: none;
     }
-
 }
+
 .menu-button{
     display: block;
     margin-left: auto;
@@ -122,12 +116,14 @@ header{
     }
 }
 
+.menu__item{position: relative;}
 .menu__link{
-    position: relative;
+    display: inline-block;
+    padding-top: 21px;
+    padding-bottom: 21px;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
-    // text-align: center;
     letter-spacing: 0.02em;
     color: $title-color;
 
@@ -136,8 +132,6 @@ header{
     &:focus{
         color: $accent-color;
     }
-
-    
 }
 
 .contacts-group {
@@ -151,14 +145,11 @@ header{
     flex-direction: column;
     gap: 32px;
 
-     @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px){
         flex-direction: column-reverse;
         gap: 10px;
     }
 }
-// .contacts__item:not(:last-child){
-//     margin-bottom: 32px;
-// }
 
 .tel {
     font-weight: 500;
@@ -167,11 +158,13 @@ header{
     letter-spacing: 0.02em;
     color: $accent-color;
 }
+
 .contacts__icon{
     @media screen and (max-width: 767px){
         display: none;
     }
 }
+
 .mail {
     font-weight: 500;
     font-size: 24px;
@@ -196,14 +189,7 @@ header{
 }
 // Tablet menu
 
-
-
 @media screen and (min-width: 768px){
-    header{
-        padding-top: 21px;
-        padding-bottom: 21px;
-    }
-    
     .tel:hover, .mail:hover, .tel:focus, .mail:focus {
         color: $accent-color;
     }
@@ -217,12 +203,10 @@ header{
     .contacts__icon--mail:hover{
         fill: $accent-color;
         cursor: pointer;
-
     }
     
     .menu__link{
         font-size: 14px;
-        padding: 32px 0;
     }
 
     .mail, .tel{
@@ -243,45 +227,45 @@ header{
     .contacts__icon{
         margin-right: 8px;
     }
-       
 }
 
 @media screen and (min-width: 1200px){
-        .contacts__list{
-            flex-direction: row-reverse;
-            gap: 30px;
-            font-size: 14px; 
-        }
-
-        .mail, .tel{
-            font-size: 14px;
-            line-height: calc(16 / 14);
-        }
-        
+    .contacts__list{
+        flex-direction: row-reverse;
+        gap: 30px;
+        font-size: 14px; 
     }
- 
-.menu .link::after,
-.contacts .link::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 0%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $text-color;
-    transition: width;
-    @extend %transition;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .mail, .tel{
+        font-size: 14px;
+        line-height: calc(16 / 14);
+    }
 }
 
-.menu .link:hover::after,
-.contacts .link:hover::after{
-    width: 100%;
-    left: 0;
-}
+@media screen and (min-width: 768px){
+    .menu .link::after,
+    .contacts_link::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $text-color;
+        transition: width;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
+    .menu .link:hover::after,
+    .contacts__link:hover::after{
+        width: 100%;
+        left: 0;
+    }
+}
 
 .link.current::after {
     display: block;
@@ -293,4 +277,3 @@ header{
     border-radius: 2px;
     background-color: $accent-color;
 }
-
