@@ -10,12 +10,16 @@ header{
     letter-spacing: 0.03em;
     text-decoration: none;
 
-    @media screen and (min-width: 768px){
+    @media screen and (max-width: 767px){
         margin-right: 87px;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     @media screen and (min-width: 768px){
         margin-right: 93px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 
@@ -32,7 +36,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    // height: 60px;
 }
 
 .main-menu{
@@ -117,10 +121,11 @@ header{
 }
 
 .menu__item{position: relative;}
+
 .menu__link{
     display: inline-block;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
@@ -131,6 +136,12 @@ header{
     &:hover,
     &:focus{
         color: $accent-color;
+    }
+
+    @media screen and (min-width: 1200px){
+        padding-top: 32px;
+        padding-bottom: 32px;
+
     }
 }
 
